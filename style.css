@@ -1,0 +1,179 @@
+/*////////////////////
+        // Positioning items    
+        //////////////////////
+        
+        Reset *
+        Display: inline vs block
+        https://www.w3schools.com/cssref/pr_class_display.asp
+    
+        Box-sizing
+        https://www.w3schools.com/css/css3_box-sizing.asp
+        
+        Using percentages and max-width
+        https://www.w3schools.com/cssref/css_units.asp
+
+        Centering
+        https://www.w3schools.com/css/css_align.asp
+    
+        Float and clear
+        https://www.w3schools.com/cssref/pr_class_float.asp
+
+                
+        Absolute/Relative positioning
+        https://www.w3schools.com/cssref/pr_class_position.asp
+        
+        
+        Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
+
+        */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image:url(images/Katu.jpeg);
+            background-color: gray;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            
+        }
+
+        /*Navigaatiopalkki*/
+
+        
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(205, 117, 10);
+        }
+
+        li {
+            float:inline-start
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 15px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: rgb(174, 103, 16)
+        }
+
+
+        #text {
+            text-align: center;
+            font-size:larger;
+            padding-top: 100px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .content {
+            color: white;
+            background-color: rgba(205, 117, 10, 0.749);
+            padding: 10px;
+            border: 3px;
+            width: 800px;
+            border-radius: 50px;
+            /*text-align: center; */
+
+            margin: auto;
+            padding-left: 60px;
+            padding-right: 60px;
+            position: relative;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .infoboksi {
+            background-color: rgba(255, 255, 255, 0.8); 
+            border: 1px solid #ccc; 
+            color: #333;
+            font-family: Arial, sans-serif;
+            width: 50%;
+            border-radius: 10px;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        
+        footer {
+            
+            background-color: rgb(205, 117, 10);
+            padding-top: 10px;
+            width: 100%;
+            height: 50px;
+            margin-top: 300px;
+            position: fixed;
+            bottom: 0;
+
+            text-align: center;
+            font-family:Arial, Helvetica, sans-serif;
+            color: white;
+            
+        }
+
+        #pyörä {
+            width: 50%;
+            float: left;
+            margin-top: 100px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            width: 100%;
+        }
+
+        #kuva {
+            /* background-color: blue; */
+            width: 100px;
+            position: absolute;
+            top: -20px;
+            right: 30px;
+            z-index: 1;
+        }
+
+       
+        /* img */
+        img {
+            
+            
+        }
+
+        /* container */
+        .container {}
+
+        /* relative and absolute positioning with blue */
+        #blue {}
+
+        
+        
+
+        p {
+            color: white;
+        }
+
+
+    /* .clearfix::after {
+        content: '';
+        clear: both;
+        display: table;
+    } */
