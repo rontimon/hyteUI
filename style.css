@@ -31,31 +31,37 @@
             box-sizing: border-box;
         }
 
+        
+
         body {
             background-image:url(images/Katu.jpeg);
             background-color: gray;
             margin: 0;
             font-family: 'Courier New', Courier, monospace;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
             
         }
 
         /*Navigaatiopalkki*/
 
-        
-
-        ul {
+        .navbar {
             list-style-type: none;
             margin: 0;
-            padding: 0;
+            padding: 5px;
             overflow: hidden;
             background-color: rgb(205, 117, 10);
+            
         }
 
-        li {
+        .navbar li {
             float:inline-start
         }
 
-        li a {
+        .navbar li a {
             display: block;
             color: white;
             text-align: center;
@@ -63,20 +69,68 @@
             text-decoration: none;
         }
 
-        li a:hover:not(.active) {
+        .navbar li a:hover:not(.active) {
             background-color: rgb(174, 103, 16)
         }
 
-
         #text {
             text-align: center;
-            font-size:larger;
-            padding-top: 100px;
+            font-size: larger;
+            padding: 20px;
+            background-color: rgba(205, 117, 10, 0.823);
+            margin: 20px auto;
+            display: block;
+            width: fit-content;
+            border-radius: 10px;
         }
+        #text a {
+            color: white;
+            text-decoration: none;
+        }
+        #text a:hover {
+            color: rgb(73, 172, 73);
+        }
+
+        
+
 
         .clear {
             clear: both;
         }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+        }
+        #herokuva {
+            background-color: rgb(205, 117, 10);
+            height: 70vh;
+            background-image: url(images/ams.jpeg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            margin-bottom: 50px;
+        }
+
+        
+
+        @media screen and (max-width: 1000px) {
+            #herokuva {
+                display: none;
+            }
+            #kuva {
+                display: none;
+            }
+            #pyörä {
+                display: none;
+            }
+            #text {
+                margin-top: 100px;
+            }
+        }
+        
 
         .content {
             color: white;
@@ -96,7 +150,7 @@
         }
 
         .infoboksi {
-            background-color: rgba(255, 255, 255, 0.8); 
+            background-color: rgba(255, 255, 255, 0.592); 
             border: 1px solid #ccc; 
             color: #333;
             font-family: Arial, sans-serif;
@@ -109,7 +163,36 @@
             margin-bottom: 100px;
         }
 
-        
+        @media screen and (max-width: 700px) {
+            .navbar li {
+                float: none;
+                width: 100%;
+            }
+            .navbar li a {
+                padding: 10px 5px;
+                font-size: 14px;
+            }
+            .content {
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .infoboksi {
+                width: 80%;
+                padding: 15px;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            h2, h3 {
+                font-size: 1.2em;
+            }
+            #text {
+                margin-top: 150px;
+            }
+            
+        }
+
         footer {
             
             background-color: rgb(205, 117, 10);
@@ -127,9 +210,9 @@
         }
 
         #pyörä {
-            width: 50%;
+            width: 40%;
             float: left;
-            margin-top: 100px;
+            margin-top: 70px;
             margin-right: 20px;
             margin-bottom: 20px;
         }
@@ -143,7 +226,6 @@
         }
 
         #kuva {
-            /* background-color: blue; */
             width: 100px;
             position: absolute;
             top: -20px;
@@ -151,6 +233,7 @@
             z-index: 1;
         }
 
+        
        
         /* img */
         img {
@@ -171,9 +254,224 @@
             color: white;
         }
 
+        /* .clearfix::after {
+                content: '';
+                clear: both;
+                display: table;
+            } */
 
-    /* .clearfix::after {
-        content: '';
-        clear: both;
-        display: table;
-    } */
+        /* Kaupungit sivun style */
+
+        /* Kaupungit sivun kuva */
+        #world {
+            background-color: rgb(205, 117, 10);
+            height: 70vh;
+            background-image: url(images/world.jpeg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        /* Kaupunkisivun kuvat */
+        #kuvat {
+            width: 165px;
+            position: absolute;
+            top: -20px;
+            right: 30px;
+            z-index: 1;
+        }
+
+        /* Kaupungit sivun contentit */
+        .content, .content1, .content2, .content3 {
+            color: white;
+            background-color: rgba(205, 117, 10, 0.749);
+            padding: 10px;
+            border: 3px;
+            width: 800px;
+            border-radius: 50px;
+            margin: auto;
+            padding-left: 60px;
+            padding-right: 60px;
+            position: relative;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            #world {
+                display: none;
+            } 
+            #kuvat {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .content1, .content2, .content3 {
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .content1 {
+                margin-top: 120px;
+            }
+        }
+
+        
+
+        #infosivulle {
+            text-align: center;
+            font-size: larger;
+            padding: 20px;
+            background-color: rgba(205, 117, 10, 0.823);
+            margin: 20px auto;
+            display: block;
+            width: fit-content;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        #infosivulle a {
+            color: white;
+            text-decoration: none;
+        }
+        #infosivulle a:hover {
+            color: rgb(73, 172, 73);
+        }
+
+    /* Info sivun stylet */
+
+    #pyöräinfo {
+        text-align: center;
+        font-size: larger;
+        padding: 20px;
+        background-color: rgba(205, 117, 10, 0.823);
+        margin: 20px auto;
+        display: block;
+        width: fit-content;
+        border-radius: 10px;
+        margin-top: 150px;
+    }
+
+    #pyöräinfo a {
+        color: white;
+        text-decoration: none;
+    }
+    #pyöräinfo a:hover {
+        color: rgb(73, 172, 73);
+    }
+    
+    .vuokraamolinkit {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .vuokraamolinkit li {
+        margin-bottom: 10px;
+    }
+
+    .vuokraamolinkit li a {
+        color: white;
+        background-color: rgba(205, 117, 10, 0.8);
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        transition: background-color 0.3s;
+    }
+
+    .vuokraamolinkit li a:hover {
+        background-color: rgb(174, 103, 16);
+    }
+
+    /* Responsaatio */
+    @media screen and (max-width: 700px) {
+        .vuokraamolinkit li a {
+            padding: 8px 12px;
+            font-size: 0.9em;
+        }
+    }
+
+
+    /* Yhteystiedot sivu */
+
+    .yhteystiedot {
+        width: 100%; 
+        max-width: 600px; 
+        border-collapse: collapse;
+        margin: 20px auto; 
+        background-color: rgba(76, 72, 72, 0.751); 
+        border-radius: 10px; 
+        overflow: hidden; 
+    }
+    
+    .yhteystiedot td {
+        padding: 15px; 
+        border-bottom: 1px solid #ccc; 
+    }
+    
+    .yhteystiedot tr:last-child td {
+        border-bottom: none; 
+    }
+    
+    /* Responsiivisuus */
+
+    @media screen and (max-width: 1000px) {
+        #ringring {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 700px) {
+        .contentY {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .yhteystiedot {
+            width: 50%;
+            padding: 0;
+            text-align: center;
+        }
+    
+        .yhteystiedot td {
+            padding: 10px;
+            font-size: 0.9em;
+        }
+    }
+
+    .contentY {
+        color: white;
+        background-color: rgba(205, 117, 10, 0.749);
+        padding: 10px;
+        border: 3px;
+        width: 800px;
+        border-radius: 50px;
+        /*text-align: center; */
+
+        margin: auto;
+        padding-left: 60px;
+        padding-right: 60px;
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 200px;
+    }
+
+    #ringring {
+        background-color: rgb(205, 117, 10);
+        height: 70vh;
+        background-image: url(images/ring.jpeg);
+        background-repeat: no-repeat;
+        background-position: center ;
+        background-size: cover;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        margin-bottom: 50px;
+    }
+    

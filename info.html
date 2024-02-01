@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <title>Pyöräilyliitto - Kaupunkipyörien vuokrausinfo</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Navigaatiopalkki -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="hytesivu.html"><strong>Kaupunkipyörät</strong></a></li>
+            <li><a href="info.html"><strong>Info</strong></a></li>
+            <li><a href="yhteystiedot.html"><strong>Yhteystiedot</strong></a></li>
+        </ul>
+    </nav>
+
+    <div class="clear"></div>
+
+    <!-- Pääsisältö -->
+    <main>
+        <p id="pyöräinfo"><a href=""><strong>Info</strong></a></p>
+
+        <!-- Vuokrausinfo -->
+        <section class="content1">
+            <h2>Kaupunkipyörien vuokraaminen</h2>
+            <p>Kaupunkipyörät tarjoavat helpon ja ekologisen tavan tutustua kaupunkiin. Vuokraaminen on tehty vaivattomaksi ja voit aloittaa pyöräilyn muutamassa minuutissa. Tutustu eri kaupunkien pyörävuokraamojen tarjontaan ja vuokrausehtoihin alla olevista linkeistä.</p>
+            
+            <ul class="vuokraamolinkit">
+                <li><a href="https://www.hsl.fi/kaupunkipyorat">Helsingin kaupunkipyörät</a></li>
+                <li><a href="https://viewstockholm.com/rent-bike-stockholm/">Tukholman kaupunkipyörät</a></li>
+                <li><a href="https://www.berlin.de/en/getting-around/bikesharing/">Berliinin kaupunkipyörät</a></li>
+            </ul>
+        </section>
+
+        <section class="infoboksi">
+            <div id="infoArea" class="info-box">
+                <strong>Selaimen kieli:</strong> <span id="langPlaceholder"></span><br>
+                <strong>Näytön koko:</strong> <span id="screenSizePlaceholder"></span><br>
+                <strong>Selaimen ikkunan koko:</strong> <span id="windowSizePlaceholder"></span><br>
+                <strong>Päivämäärä ja aika:</strong> <span id="dateTimePlaceholder"></span>
+            </div>
+            <script src="info.js"></script>
+        </section>
+    </main>
+
+    <!-- Sivun alaosa -->
+    <footer>Copyright, Pyöräilyliitto</footer>
+</body>
+
+</html>
